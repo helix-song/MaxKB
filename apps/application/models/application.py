@@ -70,7 +70,7 @@ class Chat(AppModelMixin):
     application = models.ForeignKey(Application, on_delete=models.CASCADE)
     abstract = models.CharField(max_length=256, verbose_name="摘要")
     client_id = models.UUIDField(verbose_name="客户端id", default=None, null=True)
-
+    remark = models.CharField(max_length=128, verbose_name="聊天备注")
     class Meta:
         db_table = "application_chat"
 
